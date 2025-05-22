@@ -6,21 +6,21 @@
     <div class="col-4">Action</div>
   </div>
   <div class="body-cart">
-    <div class="row-cart" *ngFor="let item of products">
+    <div class="row-cart" *ngFor="let product of products">
       <div class="col-1">
-        <!-- <a [routerLink]="['/detail',item.id]">
+        <a [routerLink]="['/detail',product.id]">
           <img
           width="50px"
           height="auto"
-          src="{{ item.image }}"
+          src="{{ product.image }}"
           alt="Watch Green"
         />
-        </a> -->
+        </a>
       </div>
-      <!-- <div class="col-2">{{ item.name | upperCasePipe }}</div> -->
-      <!-- <div class="col-3">{{ item.price | currencyPipe }}</div> -->
+      <div class="col-2">{{ product.name | upperCasePipe }}</div>
+      <div class="col-3">{{ product.price | currencyPipe }}</div>
       <div class="col-4">
-        <div class="btn-main">
+        <div class="btn-main" (click)="handleDelete(product.id)">
           <img
             height="auto"
             width="50px"
@@ -31,4 +31,5 @@
       </div>
     </div>
   </div>
+  {{totalPrice}}
 </div>

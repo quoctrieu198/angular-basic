@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderLayoutComponent } from './shared/header-layout/header-layout.component';
 
 import { NgFor } from '@angular/common';
-import { ProductItemsComponent } from './shared/product-item/products-items.component';
+// import { ProductItemsComponent } from './shared/product-item/products-items.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,6 @@ import { ProductItemsComponent } from './shared/product-item/products-items.comp
   imports: [
     RouterOutlet, 
     HeaderLayoutComponent ,
-    ProductItemsComponent,
   
   ],
   templateUrl: './app.component.html',
